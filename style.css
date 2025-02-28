@@ -664,21 +664,28 @@ footer .footer-bottom a:hover {
 }
 
 .contact-form {
-  display: grid;
+  display: grid !important;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
-  margin-bottom: 50px;
+  grid-gap: 30px !important;
+  margin-bottom: 50px !important;
 }
 
-.contact-form-group {
-  text-align: left;
+.contact-form-group,
+div.ginput_container_text,
+.ginput_container_date,
+.ginput_container_phone,
+.ginput_container_email {
+  text-align: left !important;
 }
 
 .contact-form-group.full-width {
   grid-column: span 2;
 }
 
-.contact-input {
+.contact-input,
+.gform-theme--foundation .gfield input.large,
+.gform-theme--framework .gfield--input-type-datepicker .ginput_container_date input {
+  font-family: Arial;
   width: 100%;
   padding: 15px 0;
   font-size: 24px;
@@ -688,6 +695,9 @@ footer .footer-bottom a:hover {
   transition: border-color 0.3s;
   color: #0a2a7a;
   font-weight: bold;
+  box-shadow: none;
+  border-radius: 0;
+  outline: none;
 }
 
 .contact-input::placeholder {
@@ -700,23 +710,32 @@ footer .footer-bottom a:hover {
   border-bottom-color: #0a2a7a;
 }
 
-.contact-submit {
-  background-color: #eee;
-  color: white;
-  border: none;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 250px;
-  margin-left: auto;
-  display: block;
+.gform-theme--foundation .gform_footer {
+  justify-content: flex-end;
+}
+
+.gform-theme--framework .field_description_below .gfield_description {
+  text-align: left;
+}
+
+.contact-submit,
+input[type="submit"].gform_button {
+  background-color: #eee !important;
+  color: white !important;
+  border: none !important;
+  padding: 20px !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s !important;
+  width: 250px !important;
+  margin-left: auto !important;
+  display: block !important;
 }
 
 .contact-submit:hover {
-  background-color: #ddd;
+  background-color: #ddd !important;
 }
 
 @media (max-width: 1200px) {
@@ -799,4 +818,9 @@ a:hover .arrow {
   .privacy-policy h1, article.page h1 {
     font-size: 32px;
   }
+}
+
+/* Gravity forms */
+.large input {
+  width: 100% !important;
 }

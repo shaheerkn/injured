@@ -128,42 +128,8 @@ get_header();
           ja_the_field('contact_subtitle', '<div class="contact-subtitle">', '</div>');
           ja_the_field('contact_title', '<h1 class="contact-title">', '</h1>');
           ja_the_field('contact_description', '<p class="contact-description">', '</p>');
+          echo do_shortcode(get_field('contact_form_shortcode'));
         ?>
-  
-        <form class="contact-form">
-            <div class="contact-form-group">
-                <input type="text" class="contact-input" placeholder="First Name:" required>
-            </div>
-  
-            <div class="contact-form-group">
-                <input type="text" class="contact-input" placeholder="Last Name:" required>
-            </div>
-  
-            <div class="contact-form-group">
-                <input type="text" class="contact-input" placeholder="Case Type" required>
-            </div>
-  
-            <div class="contact-form-group">
-                <input type="text" class="contact-input" placeholder="Injury Date:" required>
-            </div>
-  
-            <div class="contact-form-group">
-                <input type="tel" class="contact-input" placeholder="Phone:" required>
-            </div>
-  
-            <div class="contact-form-group">
-                <input type="email" class="contact-input" placeholder="E-mail:" required>
-            </div>
-  
-            <div class="contact-form-group full-width">
-                <input type="text" class="contact-input" placeholder="State Accident Occurred in?" required>
-            </div>
-  
-            <div class="contact-form-group"></div>
-            <div class="contact-form-group">
-                <button type="submit" class="contact-submit">SUBMIT</button>
-            </div>
-        </form>
     </div>
     </section>
   </main>
